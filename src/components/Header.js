@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../img/logo.jpg';
+import logo from '../img/logo.png';
 
 const HeaderContainer = styled.div`
     height: 10vh;
-    width: 1024px;
+    width: 1297.7px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -18,10 +18,10 @@ const HeaderContainer = styled.div`
         display: flex;
 
         p {
-            margin-left: 32px;
+            margin-left: 48px;
             font-size: 1rem;
             font-weight: 500;
-            color: #484848;
+            color: #333;
             cursor: pointer;
             transition: 0.25s;
 
