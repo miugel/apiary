@@ -35,7 +35,7 @@ const HeaderContainer = styled.div`
 const Header = () => {
     return (
         <HeaderContainer>
-            <img src={logo}/>
+            <img src={logo} alt='apiary keyboards logo'/>
             <nav>
                 <p>FAQ</p>
                 <p>Shop</p>
