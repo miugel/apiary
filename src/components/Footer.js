@@ -4,13 +4,14 @@ import styled from 'styled-components';
 const FooterContainer = styled.div`
     height: 15vh;
     display: flex;
+    justify-content: center;
     align-items: center;
 
     .footer-container {
-        margin: 0 auto;
+        width: 90%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         
         .icons {
@@ -34,6 +35,13 @@ const FooterContainer = styled.div`
             font-weight: 500;
             color: #333;
         } 
+    }
+
+    @media (min-width: 375px) {
+        .footer-container {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 `
 

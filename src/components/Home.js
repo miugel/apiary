@@ -62,9 +62,11 @@ const HomeContainer = styled.div`
     }
 
     .features {
+        margin-bottom: 96px;
+
         .feature-1 {
             height: 50vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${feature1});
+            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${feature1});
             background-size: cover;
             background-position: center;
             display: flex;
@@ -89,7 +91,7 @@ const HomeContainer = styled.div`
 
         .feature-2 {
             height: 50vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${feature2});
+            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${feature2});
             background-size: cover;
             background-position: center;
             display: flex;
@@ -114,7 +116,7 @@ const HomeContainer = styled.div`
 
         .feature-3 {
             height: 50vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${feature3});
+            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${feature3});
             background-size: cover;
             background-position: center;
             display: flex;
@@ -139,7 +141,7 @@ const HomeContainer = styled.div`
 
         .feature-4 {
             height: 50vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${feature4});
+            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${feature4});
             background-size: cover;
             background-position: center;
             display: flex;
@@ -166,8 +168,7 @@ const HomeContainer = styled.div`
     .reviews {
         width: 90%;
         margin: 0 auto;
-        margin-top: 64px;
-        margin-bottom: 64px;
+        margin-bottom: 96px;
 
         h3 {
             margin-bottom: 16px;
@@ -188,14 +189,17 @@ const HomeContainer = styled.div`
 
             .reviewer {
                 margin-bottom: 4px;
+                font-weight: 700;
             }
         }
     }
 
     .stream {
-        margin: 64px 0;
+        margin-bottom: 96px;
 
         h3 {
+            width: 90%;
+            margin: 0 auto;
             margin-bottom: 16px;
             font-size: 2rem;
             font-weight: 700;
@@ -212,8 +216,7 @@ const HomeContainer = styled.div`
     .shop {
         width: 90%;
         margin: 0 auto;
-        margin-top: 64px;
-        margin-bottom: 64px;
+        margin-bottom: 96px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -250,6 +253,72 @@ const HomeContainer = styled.div`
 
             :hover {
                 box-shadow: none;
+            }
+        }
+    }
+
+    @media (min-width: 375px) {
+        .landing-container {
+            height: 90vh;
+
+            .landing {
+                height: 85vh;
+            }
+        }
+
+        .features {
+            .feature-1 {
+                height: 60vh;
+
+                p {
+                    font-size: 1.25rem;
+                }
+            }
+            
+            .feature-2 {
+                height: 60vh;
+
+                p {
+                    font-size: 1.25rem;
+                }
+            }
+
+            .feature-3 {
+                height: 60vh;
+
+                p {
+                    font-size: 1.25rem;
+                }
+            }
+
+            .feature-4 {
+                height: 60vh;
+
+                p {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+
+        .stream {
+            iframe {
+                height: 210.9375px;
+                width: 375px;
+            }
+        }
+
+        .shop {
+            p {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    @media (min-width: 414px) {
+        .stream {
+            iframe {
+                height: 232.875px;
+                width: 414px;
             }
         }
     }
@@ -304,11 +373,11 @@ const Home = () => {
 
             <div className='stream'>
                 <h3>Watch Your Build Streamed Live on Twitch</h3>
-                <iframe src="https://www.youtube.com/embed/oVyNu3pyOdw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe title='stream' src="https://www.youtube.com/embed/oVyNu3pyOdw" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
 
             <div className='shop'>
-                <h3>Want to show your support, but don't need or have the cash for a build?</h3>
+                <h3>Don't need a build, but still want to show your support?</h3>
                 <p>Check out our shop and see if anything tickles your fancy!</p>
                 <button>Shop</button>
             </div>
