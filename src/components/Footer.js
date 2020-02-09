@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.div`
-    height: 10vh;
+    height: 15vh;
     display: flex;
     align-items: center;
 
-    .container {
-        width: 1297.7px;
+    .footer-container {
         margin: 0 auto;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
         
@@ -17,6 +17,7 @@ const FooterContainer = styled.div`
             a {
                 i {
                     margin-right: 8px;
+                    margin-bottom: 8px;
                     font-size: 20px;
                     color: #333;
                     transition: 0.25s;
@@ -29,7 +30,7 @@ const FooterContainer = styled.div`
         }
 
         p {
-            font-size: 14px;
+            font-size: 0.875rem;
             font-weight: 500;
             color: #333;
         } 
@@ -39,7 +40,7 @@ const FooterContainer = styled.div`
 const Footer = () => {
     return (
         <FooterContainer>
-            <div className='container'>
+            <div className='footer-container'>
                 <div className='icons'>
                     <a href='https://www.twitch.tv/apiarykeyboards' target='_blank' rel='noopener noreferrer'><i className='fab fa-twitch'></i></a>
                     <a href='https://www.instagram.com/apiarykeyboards/' target='_blank' rel='noopener noreferrer'><i className='fab fa-instagram'></i></a>

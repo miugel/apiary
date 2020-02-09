@@ -4,248 +4,314 @@ import carousel1 from '../img/carousel1.jpeg';
 import carousel2 from '../img/carousel2.jpg';
 import carousel3 from '../img/carousel3.jpeg';
 import carousel4 from '../img/carousel4.jpg';
+import feature1 from '../img/feature1.jpeg';
 import feature2 from '../img/feature2.jpeg';
 import feature3 from '../img/feature3.jpeg';
 import feature4 from '../img/feature4.jpeg';
-import miscellaneous from '../img/miscellaneous.jpeg';
 
 const HomeContainer = styled.div`
-    width: 1366px;
-    margin: 0 auto;
-    border-radius: 3px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-    .landing {
-        height: 85vh;
+    .landing-container {
+        height: 87.5vh;
         background: linear-gradient(to right, #ffb347, #ffcc33);
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
 
-        h2 {
-            width: 75%;
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #333;
-            text-align: center;
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #333;
-        }
-
-        a {
-            button {
-                margin-top: 16px;
-                padding: 8px 64px;
-                border: none;
-                border-radius: 3px;
-                background: whitesmoke;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                outline: none;
-                font-family: 'Quicksand', sans-serif;
-                font-size: 16px;
+        .landing {
+            height: 82.5vh;
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            h2 {
+                margin-bottom: 8px;
+                font-size: 3rem;
+                font-weight: 700;
+                color: #333;
+                text-align: center;
+            }
+    
+            p {
+                margin-bottom: 16px;
+                font-size: 1.5rem;
                 font-weight: 600;
                 color: #333;
-                cursor: pointer;
-                transition: 0.25s;
+                text-align: center;
+            }
     
-                :hover {
-                    box-shadow: none;
+            a {
+                button {
+                    padding: 12px 32px;
+                    border: none;
+                    border-radius: 3px;
+                    background: white;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    font-family: 'Quicksand', sans-serif;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    color: #333;
+                    cursor: pointer;
+                    transition: 0.25s;
+        
+                    :hover {
+                        box-shadow: none;
+                    }
                 }
             }
         }
     }
 
     .features {
-        .feature {
-            height: 45vh;
+        .feature-1 {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${feature1});
+            background-size: cover;
+            background-position: center;
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-            .right-column {
-                width: 50%;
-                background: #333;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+            i {
+                margin-bottom: 4px;
+                font-size: 2rem;
+                color: #ffb347;
+            }
 
-                i {
-                    margin-bottom: 8px;
-                    font-size: 2rem;
-                    color: #ffb347;
-                }
+            p {
+                width: 90%;
+                font-size: 1rem;
+                font-weight: 500;
+                color: white;
+                text-align: center;
+            }
+        }
 
-                p {
-                    width: 75%;
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                    color: whitesmoke;
-                    text-align: center;
-                }
+        .feature-2 {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${feature2});
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                margin-bottom: 4px;
+                font-size: 2rem;
+                color: #ffb347;
+            }
+
+            p {
+                width: 90%;
+                font-size: 1rem;
+                font-weight: 500;
+                color: white;
+                text-align: center;
+            }
+        }
+
+        .feature-3 {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${feature3});
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                margin-bottom: 4px;
+                font-size: 2rem;
+                color: #ffb347;
+            }
+
+            p {
+                width: 90%;
+                font-size: 1rem;
+                font-weight: 500;
+                color: white;
+                text-align: center;
+            }
+        }
+
+        .feature-4 {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${feature4});
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                margin-bottom: 4px;
+                font-size: 2rem;
+                color: #ffb347;
+            }
+
+            p {
+                width: 90%;
+                font-size: 1rem;
+                font-weight: 500;
+                color: white;
+                text-align: center;
             }
         }
     }
 
-    .gallery {
-        height: 85vh;
-        background: whitesmoke;
+    .reviews {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 64px;
+        margin-bottom: 64px;
+
+        h3 {
+            margin-bottom: 16px;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            text-align: center;
+        }
+
+        .review {
+            margin-bottom: 16px;
+
+            p {
+                font-size: 1rem;
+                font-weight: 500;
+                color: #333;
+            }
+
+            .reviewer {
+                margin-bottom: 4px;
+            }
+        }
+    }
+
+    .stream {
+        margin: 64px 0;
+
+        h3 {
+            margin-bottom: 16px;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            text-align: center;
+        }
+
+        iframe {
+            height: 180px;
+            width: 320px;
+        }
+    }
+
+    .shop {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 64px;
+        margin-bottom: 64px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        h4 {
-            margin-bottom: 32px;
+        h3 {
+            margin-bottom: 8px;
             font-size: 2rem;
             font-weight: 700;
             color: #333;
+            text-align: center;
         }
 
-        .carousel {
-            display: flex;
-            align-items: center;
+        p {
+            margin-bottom: 16px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #333;
+            text-align: center;
+        }
 
-            i {
-                margin: 0 32px;
-                font-size: 1.5rem;
-                color: #444;
-                cursor: pointer;
-                transition: 0.25s;
+        button {
+            padding: 12px 32px;
+            border: none;
+            border-radius: 3px;
+            background: linear-gradient(to right, #ffb347, #ffcc33);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            transition: 0.25s;
 
-                :hover {
-                    opacity: 0.5;
-                }
-            }
-
-            .image {
-                height: 60vh;
-                width: 90vh;
-                border-radius: 3px;
-                background: ${({count}) => {
-                    if (count === 1) {
-                        return `url(${carousel1})`;
-                    } else if (count === 2) {
-                        return `url(${carousel2})`;
-                    } else if (count === 3) {
-                        return `url(${carousel3})`;
-                    } else {
-                        return `url(${carousel4})`;
-                    };
-                }};
-                background-size: cover;
-                background-position: center;
-                display: flex;
-
-                p {
-                    padding: 16px;
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                    color: whitesmoke;
-                    opacity: 0;
-                    transition: 0.25s;
-                }
-
-                :hover {
-                    p {
-                        opacity: 1;
-                    }
-                }
+            :hover {
+                box-shadow: none;
             }
         }
     }
 `
 
 const Home = () => {
-    const [count, setCount]  = useState(1);
-
-    const increment = () => {
-        if (count === 4) {
-            setCount(1);
-        } else {
-            setCount(count + 1);
-        }
-        console.log(count);
-    };
-
-    const decrement = () => {
-        if (count === 1) {
-            setCount(4);
-        } else {
-            setCount(count - 1);
-        }
-        console.log(count);
-    };
-
     return (
-        <HomeContainer count={count}>
-            <div className='landing'>
-                <h2>Custom mechanical keyboards</h2>
-                <h3>built to your taste, repaired, and modified</h3>
-                <a href='https://www.reddit.com/r/mechmarket/comments/e9rbg9/service_apiary_keyboards_building_soldering/' target='_blank' rel='noopener noreferrer'><button>Services</button></a>
-            </div>
-
-            <div className='gallery'>
-                <h4>Gallery</h4>
-                <div className='carousel'>
-                    <i className='fas fa-chevron-circle-left' onClick={decrement}></i>
-                    
-                    <div className='image'>
-                        {count === 1 && <p>Polycarbonate Singa</p>}
-                        {count === 2 && <p>Discipline 65</p>}
-                        {count === 3 && <p>TGR x Singa Unikorn</p>}
-                        {count === 4 && <p>Keycult 1/65 Commission</p>}
-                    </div>
-                    
-                    <i className='fas fa-chevron-circle-right' onClick={increment}></i>
+        <HomeContainer>
+            <div className='landing-container'>
+                <div className='landing'>
+                    <h2>Custom mechanical keyboards</h2>
+                    <p>built to your taste, repaired, or modified</p>
+                    <a href='https://www.reddit.com/r/mechmarket/comments/e9rbg9/service_apiary_keyboards_building_soldering/' target='_blank' rel='noopener noreferrer'><button>Our Services</button></a>
                 </div>
             </div>
 
             <div className='features'>
-                <div className='feature'>
-                    <div style={{width: '50%', background: `url(${feature3})`, backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
-                    <div className='right-column'>
-                        <i className="far fa-check-circle"></i>
-                        <p>Knowledgeable and experienced</p>
-                    </div>
+                <div className='feature-1'>
+                    <i className="far fa-check-circle"></i>
+                    <p>Used by hundreds of community members and counting</p>
                 </div>
 
-                <div className='feature'>
-                    <div className='right-column'>
-                        <i className="far fa-check-circle"></i>
-                        <p>Used by hundreds and counting</p>
-                    </div>
-                    <div style={{width: '50%', background: `url(${feature4})`, backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
+                <div className='feature-2'>
+                    <i className="far fa-check-circle"></i>
+                    <p>Knowledgeable and experienced</p>
                 </div>
 
-                <div className='feature'>
-                    <div style={{width: '50%', background: `url(${miscellaneous})`, backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
-                    <div className='right-column'>
-                        <i className="far fa-check-circle"></i>
-                        <p>Quick turnaround times</p>
-                    </div>
+                <div className='feature-3'>
+                    <i className="far fa-check-circle"></i>
+                    <p>Quick turnaround times</p>
                 </div>
 
-                <div className='feature'>
-                    <div className='right-column'>
-                        <i className="far fa-check-circle"></i>
-                        <p>Each board is handled with the utmost attention and care</p>
-                    </div>
-                    <div style={{width: '50%', background: `url(${feature2})`, backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
+                <div className='feature-4'>
+                    <i className="far fa-check-circle"></i>
+                    <p>Each board is handled with the utmost attention and care</p>
+                </div>
+            </div>
+            
+            {/* would need to create containers for background color */}
+
+            <div className='reviews'>
+                <h3>Reviews</h3>
+                <div className='review'>
+                    <p className='reviewer'>u/unteagle20</p>
+                    <p>"I just received my board back that had a faulty usb and it works perfectly now!! Can't recommend enough."</p>
+                </div>
+                <div className='review'>
+                    <p className='reviewer'>u/mizer357</p>
+                    <p>"Great experience working with Apiary -- nicely fixed a faulty CTRL PCB, and elevated some Zealios switches to perfection. Highly recommended."</p>
                 </div>
             </div>
 
-            {/* landing x
-            features x
-            gallery 
-            reviews
-            video
-            call to action for merch */}
+            <div className='stream'>
+                <h3>Watch Your Build Streamed Live on Twitch</h3>
+                <iframe src="https://www.youtube.com/embed/oVyNu3pyOdw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div className='shop'>
+                <h3>Want to show your support, but don't need or have the cash for a build?</h3>
+                <p>Check out our shop and see if anything tickles your fancy!</p>
+                <button>Shop</button>
+            </div>
         </HomeContainer>
     );
 };
