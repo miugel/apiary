@@ -28,11 +28,15 @@ const HeaderContainer = styled.div`
             display: flex;
             list-style-type: none;
 
-            li {
-                margin-left: 32px;
-                font-size: 1rem;
-                font-weight: 500;
-                color: #333;
+            a {
+                text-decoration: none;
+
+                li {
+                    margin-left: 32px;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: #333;
+                }
             }
         }
     }
@@ -40,7 +44,7 @@ const HeaderContainer = styled.div`
     @media (min-width: 375px) {
         height: 10vh;
     }
-`
+`;
 
 const Header = () => {
     return (
@@ -49,8 +53,8 @@ const Header = () => {
             {/* <i className="fas fa-bars"></i> */}
             <nav>
                 <ul>
-                    <li>FAQ</li>
-                    <li>Shop</li>
+                    <Link to='/faq'><li>FAQ</li></Link>
+                    <Link to='/shop'><li>Shop</li></Link>
                     {/* <li>Cart</li> */}
                 </ul>
             </nav>

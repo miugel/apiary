@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import carousel1 from '../img/carousel1.jpeg';
 import carousel2 from '../img/carousel2.jpg';
@@ -237,22 +238,24 @@ const HomeContainer = styled.div`
             color: #333;
             text-align: center;
         }
-
-        button {
-            padding: 12px 32px;
-            border: none;
-            border-radius: 3px;
-            background: linear-gradient(to right, #ffb347, #ffcc33);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            font-family: 'Quicksand', sans-serif;
-            font-size: 1rem;
-            font-weight: 600;
-            color: white;
-            cursor: pointer;
-            transition: 0.25s;
-
-            :hover {
-                box-shadow: none;
+        
+        a {
+            button {
+                padding: 12px 32px;
+                border: none;
+                border-radius: 3px;
+                background: linear-gradient(to right, #ffb347, #ffcc33);
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                font-family: 'Quicksand', sans-serif;
+                font-size: 1rem;
+                font-weight: 600;
+                color: white;
+                cursor: pointer;
+                transition: 0.25s;
+    
+                :hover {
+                    box-shadow: none;
+                }
             }
         }
     }
@@ -322,7 +325,7 @@ const HomeContainer = styled.div`
             }
         }
     }
-`
+`;
 
 const Home = () => {
     return (
@@ -379,7 +382,7 @@ const Home = () => {
             <div className='shop'>
                 <h3>Don't need a build, but still want to show your support?</h3>
                 <p>Check out our shop and see if anything tickles your fancy!</p>
-                <button>Shop</button>
+                <Link to='/shop'><button>Shop</button></Link>
             </div>
         </HomeContainer>
     );

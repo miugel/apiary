@@ -43,7 +43,7 @@ const FooterContainer = styled.div`
             justify-content: space-between;
         }
     }
-`
+`;
 
 const Footer = () => {
     return (
