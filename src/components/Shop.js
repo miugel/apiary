@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import product1 from '../img/product1.jpg';
 import product2 from '../img/product2.jpg';
@@ -44,7 +44,22 @@ const  ShopContainer = styled.div`
     }
 `;
 
+/* global Stripe */
+const stripe = Stripe('pk_test_jlwufytqI1hnlgTUDi3DD7qh00P74sLvEM');
+
 const Shop = () => {
+    const onClick = () => {
+        stripe.redirectToCheckout({
+            items: [
+              {sku: 'sku_GhmqRa7zJiHUB2', quantity: 2}
+            ],
+            successUrl: 'https://localhost:3000/success',
+            cancelUrl: 'https://localhost:3000/cancel',
+          }).then(result => {
+            
+          });
+    };
+
     return (
         <ShopContainer>
             <h2>Shop</h2>
@@ -54,6 +69,7 @@ const Shop = () => {
                     <img src={product1} alt='apiary sticker'/>
                     <p className='name'>Apiary Keyboards Sticker</p>
                     <p className='price'>$3</p>
+                    <button onClick={onClick}>BUY</button>
                 </div>
 
                 <div className='product'>
