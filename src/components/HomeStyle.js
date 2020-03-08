@@ -144,7 +144,7 @@ const HomeContainer = styled.div`
 
         iframe {
             height: 162px;
-            width: 100%;
+            width: 288px;
             border-radius: 3px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
@@ -201,6 +201,7 @@ const HomeContainer = styled.div`
         .stream {
             iframe {
                 height: 189.84375px;
+                width: 337.5;
             }
         }
     }
@@ -209,6 +210,16 @@ const HomeContainer = styled.div`
         .stream {
             iframe {
                 height: 209.5875px;
+                width: 372.6px;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .stream {
+            iframe {
+                height: 388.8px;
+                width: 691.2px;
             }
         }
     }
