@@ -34,7 +34,7 @@ const HeaderContainer = styled.div`
                     text-decoration: none;
     
                     li {
-                        margin-left: 40px;
+                        margin-left: 32px;
                         font-size: 1rem;
                         font-weight: 500;
                         color: #333;

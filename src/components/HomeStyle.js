@@ -10,6 +10,7 @@ const HomeContainer = styled.div`
         background: linear-gradient(to right, #ffb347, #ffcc33);
         
         .landing {
+            max-width: 921.6px;
             height: 80vh;
             width: 90%;
             margin: 0 auto;
@@ -18,15 +19,15 @@ const HomeContainer = styled.div`
             justify-content: center;
             align-items: center;
 
-            h2 {
-                margin-bottom: 8px;
+            h1 {
+                margin-bottom: 0px;
                 font-size: 3rem;
                 font-weight: 700;
                 color: #333;
                 text-align: center;
             }
 
-            p {
+            h2 {
                 margin-bottom: 16px;
                 font-size: 1.5rem;
                 font-weight: 600;
@@ -39,7 +40,7 @@ const HomeContainer = styled.div`
                     padding: 12px 32px;
                     border: none;
                     border-radius: 3px;
-                    background: white;
+                    background: whitesmoke;
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                     font-family: 'Quicksand', sans-serif;
                     font-size: 1rem;
@@ -57,175 +58,117 @@ const HomeContainer = styled.div`
     }
 
     .features {
-        margin-bottom: 96px;
-
-        .feature-1 {
-            height: 50vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${feature1});
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            i {
-                margin-bottom: 4px;
-                font-size: 2rem;
-                color: #ffb347;
-            }
-
-            p {
-                width: 90%;
-                font-size: 1rem;
-                font-weight: 500;
-                color: white;
-                text-align: center;
-            }
-        }
-
-        .feature-2 {
-            height: 50vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${feature2});
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            i {
-                margin-bottom: 4px;
-                font-size: 2rem;
-                color: #ffb347;
-            }
-
-            p {
-                width: 90%;
-                font-size: 1rem;
-                font-weight: 500;
-                color: white;
-                text-align: center;
-            }
-        }
-
-        .feature-3 {
-            height: 50vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${feature3});
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            i {
-                margin-bottom: 4px;
-                font-size: 2rem;
-                color: #ffb347;
-            }
-
-            p {
-                width: 90%;
-                font-size: 1rem;
-                font-weight: 500;
-                color: white;
-                text-align: center;
-            }
-        }
-
-        .feature-4 {
-            height: 50vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${feature4});
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            i {
-                margin-bottom: 4px;
-                font-size: 2rem;
-                color: #ffb347;
-            }
-
-            p {
-                width: 90%;
-                font-size: 1rem;
-                font-weight: 500;
-                color: white;
-                text-align: center;
-            }
-        }
-    }
-
-    .reviews {
+        max-width: 921.6px;
         width: 90%;
+        padding-top: 64px;
+        padding-bottom: 64px;
         margin: 0 auto;
-        margin-bottom: 96px;
 
-        h3 {
-            margin-bottom: 16px;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #333;
-            text-align: center;
-        }
+        .feature {
+            display: flex;
+            flex-direction: column;
 
-        .review {
-            margin-bottom: 16px;
-
-            p {
-                font-size: 1rem;
-                font-weight: 500;
-                color: #333;
+            img {
+                margin: 32px 0;
+                width: 100%;
+                border-radius: 3px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             }
 
-            .reviewer {
-                margin-bottom: 4px;
-                font-weight: 700;
+            .information {
+                margin-bottom: 32px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                i {
+                    margin-bottom: 8px;
+                    font-size: 2rem;
+                    color: #ffb347;
+                }
+
+                p {
+                    max-width: 372.6px;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: #333;
+                    text-align: center;
+                }
             }
         }
     }
+
+    // .reviews {
+    //     width: 90%;
+    //     margin: 0 auto;
+    //     margin-bottom: 96px;
+
+    //     h3 {
+    //         margin-bottom: 16px;
+    //         font-size: 2rem;
+    //         font-weight: 700;
+    //         color: #333;
+    //         text-align: center;
+    //     }
+
+    //     .review {
+    //         margin-bottom: 16px;
+
+    //         p {
+    //             font-size: 1rem;
+    //             font-weight: 500;
+    //             color: #333;
+    //         }
+
+    //         .reviewer {
+    //             margin-bottom: 4px;
+    //             font-weight: 700;
+    //         }
+    //     }
+    // }
 
     .stream {
-        margin-bottom: 96px;
+        width: 90%;
+        padding-top: 64px;
+        padding-bottom: 64px;
+        margin: 0 auto;
 
-        h3 {
-            width: 90%;
-            margin: 0 auto;
-            margin-bottom: 16px;
-            font-size: 2rem;
+        h2 {
+            margin-bottom: 32px;
+            font-size: 1.5rem;
             font-weight: 700;
             color: #333;
             text-align: center;
         }
 
         iframe {
-            height: 180px;
-            width: 320px;
+            height: 162px;
+            width: 100%;
+            border-radius: 3px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     }
 
     .shop {
         width: 90%;
+        padding-top: 64px;
+        padding-bottom: 64px;
         margin: 0 auto;
-        margin-bottom: 96px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        h3 {
+        h2 {
             margin-bottom: 8px;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: #333;
             text-align: center;
         }
 
-        p {
+        h3 {
             margin-bottom: 16px;
             font-size: 1rem;
             font-weight: 500;
@@ -255,58 +198,9 @@ const HomeContainer = styled.div`
     }
 
     @media (min-width: 375px) {
-        .landing-container {
-            height: 90vh;
-
-            .landing {
-                height: 85vh;
-            }
-        }
-
-        .features {
-            .feature-1 {
-                height: 60vh;
-
-                p {
-                    font-size: 1.25rem;
-                }
-            }
-            
-            .feature-2 {
-                height: 60vh;
-
-                p {
-                    font-size: 1.25rem;
-                }
-            }
-
-            .feature-3 {
-                height: 60vh;
-
-                p {
-                    font-size: 1.25rem;
-                }
-            }
-
-            .feature-4 {
-                height: 60vh;
-
-                p {
-                    font-size: 1.25rem;
-                }
-            }
-        }
-
         .stream {
             iframe {
-                height: 210.9375px;
-                width: 375px;
-            }
-        }
-
-        .shop {
-            p {
-                font-size: 1.25rem;
+                height: 189.84375px;
             }
         }
     }
@@ -314,8 +208,7 @@ const HomeContainer = styled.div`
     @media (min-width: 414px) {
         .stream {
             iframe {
-                height: 232.875px;
-                width: 414px;
+                height: 209.5875px;
             }
         }
     }

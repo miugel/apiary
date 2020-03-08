@@ -2,29 +2,28 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.div`
-    height: 15vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 921.6px;
+    height: 72px;
+    width: 90%;
+    margin: 0 auto;
 
     .footer-container {
-        width: 90%;
+        height: 100%;
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         
         .icons {
             a {
                 i {
                     margin-right: 8px;
-                    margin-bottom: 8px;
-                    font-size: 20px;
+                    font-size: 1.25rem;
                     color: #333;
                     transition: 0.25s;
 
                     :hover {
-                        color: darkgray;
+                        opacity: 0.5;
                     }
                 }
             }
@@ -35,13 +34,6 @@ const FooterContainer = styled.div`
             font-weight: 500;
             color: #333;
         } 
-    }
-
-    @media (min-width: 375px) {
-        .footer-container {
-            flex-direction: row;
-            justify-content: space-between;
-        }
     }
 `;
 
