@@ -53,7 +53,6 @@ const Footer = () => {
                     <a href='https://www.twitch.tv/apiarykeyboards' target='_blank' rel='noopener noreferrer'><i className='fab fa-twitch'></i></a>
                     <a href='https://www.instagram.com/apiarykeyboards/' target='_blank' rel='noopener noreferrer'><i className='fab fa-instagram'></i></a>
                     <a href='https://www.youtube.com/channel/UCtOAR2JsDarxi40ocTPxYkg' target='_blank' rel='noopener noreferrer'><i className='fab fa-youtube'></i></a>
-                    <a href='https://linktr.ee/apiarykeyboards' target='_blank' rel='noopener noreferrer'><i className='fas fa-tree'></i></a>
                 </div>
                 <p>&copy; 2020 Apiary Keyboards</p>
             </div>
