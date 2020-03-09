@@ -15,9 +15,12 @@ const FooterContainer = styled.div`
         align-items: center;
         
         .icons {
+            width: 76px;
+            display: flex;
+            justify-content: space-between;
+
             a {
                 i {
-                    margin-right: 8px;
                     font-size: 1.25rem;
                     color: #333;
                     transition: 0.25s;

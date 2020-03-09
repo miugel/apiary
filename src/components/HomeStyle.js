@@ -89,7 +89,7 @@ const HomeContainer = styled.div`
                 }
 
                 p {
-                    max-width: 372.6px;
+                    max-width: 288px;
                     font-size: 1rem;
                     font-weight: 500;
                     color: #333;
@@ -129,9 +129,10 @@ const HomeContainer = styled.div`
     // }
 
     .stream {
+        max-width: 921.6px;
         width: 90%;
-        padding-top: 64px;
-        padding-bottom: 64px;
+        padding-top: 98px;
+        padding-bottom: 98px;
         margin: 0 auto;
 
         h2 {
@@ -143,17 +144,19 @@ const HomeContainer = styled.div`
         }
 
         iframe {
-            height: 162px;
-            width: 288px;
+            max-height: 518.4px;
+            height: 50.625vw;
+            width: 100%;
             border-radius: 3px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     }
 
     .shop {
+        max-width: 921.6px;
         width: 90%;
-        padding-top: 64px;
-        padding-bottom: 64px;
+        padding-top: 98px;
+        padding-bottom: 98px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -197,29 +200,34 @@ const HomeContainer = styled.div`
         }
     }
 
-    @media (min-width: 375px) {
-        .stream {
-            iframe {
-                height: 189.84375px;
-                width: 337.5;
+    @media (min-width: 1024px) {
+        .features {
+            .feature {
+                flex-direction: row;
+                justify-content: space-between;
+
+                img {
+                    width: 55%;
+                }
+
+                .information {
+                    width: 45%;
+
+                    p {
+                        font-size: 1.125rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .feature:nth-child(2n) {
+                flex-direction: row-reverse;
             }
         }
-    }
 
-    @media (min-width: 414px) {
-        .stream {
-            iframe {
-                height: 209.5875px;
-                width: 372.6px;
-            }
-        }
-    }
-
-    @media (min-width: 768px) {
-        .stream {
-            iframe {
-                height: 388.8px;
-                width: 691.2px;
+        .shop {
+            h3 {
+                font-size: 1.125rem;
             }
         }
     }

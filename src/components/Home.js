@@ -26,7 +26,7 @@ const Home = () => {
                         <img src={feature1} alt='keyboard image'/>
                         <div className='information'>
                             <i className="far fa-check-circle"></i>
-                            <p>Used by hundreds of community members and counting</p>
+                            <p>Serviced hundreds of community members and counting</p>
                         </div>
                     </div>
 

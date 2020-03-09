@@ -30,22 +30,24 @@ const HeaderContainer = styled.div`
                 display: flex;
                 align-items: center;
     
-                a {
-                    text-decoration: none;
-    
-                    li {
-                        margin-left: 32px;
-                        font-size: 1rem;
-                        font-weight: 500;
-                        color: #333;
-                        transition: 0.25s;
-    
-                        :hover {
-                            opacity: 0.5;
-                        }
+                li {
+                    margin-left: 32px;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    transition: 0.25s;
+
+                    :hover {
+                        opacity: 0.5;
                     }
 
-                    .cart {
+                    a {
+                        text-decoration: none;
+                        color: #333;
+                    }
+                }
+
+                .cart {
+                    a {
                         display: flex;
                         align-items: center;
 
@@ -63,6 +65,7 @@ const HeaderContainer = styled.div`
                         }
                     }
                 }
+                
             }
         }
     }
@@ -75,9 +78,10 @@ const Header = () => {
                 <Link to='/'><img src={logo} alt='apiary keyboards logo'/></Link>
                 <nav>
                     <ul>
-                        <a href='https://www.reddit.com/r/mechmarket/comments/e9rbg9/service_apiary_keyboards_building_soldering/' target='_blank' rel='noopener noreferrer'><li>FAQ</li></a>
-                        <Link to='/shop'><li>Shop</li></Link>
-                        <Link to='/cart'><li className='cart'>Cart<p>99</p></li></Link>
+                        <li><a href='https://www.reddit.com/r/mechmarket/comments/e9rbg9/service_apiary_keyboards_building_soldering/' target='_blank' rel='noopener noreferrer'>FAQ</a></li>
+                        <li><Link to='/gallery'>Gallery</Link></li>
+                        <li><Link to='/shop'>Shop</Link></li>
+                        <li className='cart'><Link to='/cart'>Cart<p>99</p></Link></li>
                     </ul>
                 </nav>
             </div>
