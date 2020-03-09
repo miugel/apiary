@@ -91,7 +91,7 @@ const HomeContainer = styled.div`
                 p {
                     max-width: 288px;
                     font-size: 1rem;
-                    font-weight: 500;
+                    font-weight: 600;
                     color: #333;
                     text-align: center;
                 }
@@ -189,7 +189,7 @@ const HomeContainer = styled.div`
                 font-family: 'Quicksand', sans-serif;
                 font-size: 1rem;
                 font-weight: 600;
-                color: white;
+                color: whitesmoke;
                 cursor: pointer;
                 transition: 0.25s;
 
@@ -215,7 +215,6 @@ const HomeContainer = styled.div`
 
                     p {
                         font-size: 1.125rem;
-                        font-weight: 600;
                     }
                 }
             }

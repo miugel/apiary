@@ -79,7 +79,7 @@ const Header = () => {
                 <nav>
                     <ul>
                         <li><a href='https://www.reddit.com/r/mechmarket/comments/e9rbg9/service_apiary_keyboards_building_soldering/' target='_blank' rel='noopener noreferrer'>FAQ</a></li>
-                        <li><Link to='/gallery'>Gallery</Link></li>
+                        {/* <li><Link to='/gallery'>Gallery</Link></li> */}
                         <li><Link to='/shop'>Shop</Link></li>
                         <li className='cart'><Link to='/cart'>Cart<p>99</p></Link></li>
                     </ul>
