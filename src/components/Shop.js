@@ -101,9 +101,9 @@ const Shop = () => {
             ],
             successUrl: 'https://localhost:3000/success',
             cancelUrl: 'https://localhost:3000/cancel',
-          }).then(result => {
-            
-          });
+        }).then(result => {
+            console.log(result.error.message);
+        });
     };
 
     return (
