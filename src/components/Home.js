@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-import HomeContainer from './HomeStyle';
+import HomeContainer from './styles/HomeStyle';
 import feature1 from '../img/feature1.jpeg';
 import feature2 from '../img/feature2.jpeg';
 import feature3 from '../img/feature3.jpeg';

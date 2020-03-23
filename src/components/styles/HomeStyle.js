@@ -1,8 +1,4 @@
 import styled from 'styled-components';
-import feature1 from '../img/feature1.jpeg';
-import feature2 from '../img/feature2.jpeg';
-import feature3 from '../img/feature3.jpeg';
-import feature4 from '../img/feature4.jpeg';
 
 const HomeContainer = styled.div`
     .landing-container {
@@ -10,7 +6,6 @@ const HomeContainer = styled.div`
         background: linear-gradient(to right, #ffb347, #ffcc33);
         
         .landing {
-            max-width: 921.6px;
             height: 80vh;
             width: 90%;
             margin: 0 auto;
@@ -20,7 +15,6 @@ const HomeContainer = styled.div`
             align-items: center;
 
             h1 {
-                margin-bottom: 0px;
                 font-size: 3rem;
                 font-weight: 700;
                 color: #333;
@@ -40,7 +34,7 @@ const HomeContainer = styled.div`
                     padding: 12px 32px;
                     border: none;
                     border-radius: 3px;
-                    background: whitesmoke;
+                    background: #f5f5f5;
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                     font-family: 'Quicksand', sans-serif;
                     font-size: 1rem;
@@ -58,25 +52,24 @@ const HomeContainer = styled.div`
     }
 
     .features {
-        max-width: 921.6px;
         width: 90%;
-        padding-top: 64px;
-        padding-bottom: 64px;
         margin: 0 auto;
+        margin-top: 128px;
+        margin-bottom: 128px;
 
         .feature {
             display: flex;
             flex-direction: column;
 
             img {
-                margin: 32px 0;
                 width: 100%;
+                margin-bottom: 32px;
                 border-radius: 3px;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             }
 
             .information {
-                margin-bottom: 32px;
+                margin-bottom: 64px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -95,6 +88,12 @@ const HomeContainer = styled.div`
                     color: #333;
                     text-align: center;
                 }
+            }
+        }
+
+        .feature:last-child {
+            .information {
+                margin-bottom: 0;
             }
         }
     }
@@ -129,11 +128,9 @@ const HomeContainer = styled.div`
     // }
 
     .stream {
-        max-width: 921.6px;
         width: 90%;
-        padding-top: 98px;
-        padding-bottom: 98px;
         margin: 0 auto;
+        margin-bottom: 128px;
 
         h2 {
             margin-bottom: 32px;
@@ -153,11 +150,9 @@ const HomeContainer = styled.div`
     }
 
     .shop {
-        max-width: 921.6px;
         width: 90%;
-        padding-top: 98px;
-        padding-bottom: 98px;
         margin: 0 auto;
+        margin-bottom: 128px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -202,16 +197,21 @@ const HomeContainer = styled.div`
 
     @media (min-width: 1024px) {
         .features {
+            width: 972.8px;
+
             .feature {
+                margin-bottom: 64px;
                 flex-direction: row;
                 justify-content: space-between;
 
                 img {
                     width: 55%;
+                    margin-bottom: 0;
                 }
 
                 .information {
                     width: 45%;
+                    margin-bottom: 0;
 
                     p {
                         font-size: 1.125rem;
@@ -222,6 +222,10 @@ const HomeContainer = styled.div`
             .feature:nth-child(2n) {
                 flex-direction: row-reverse;
             }
+        }
+
+        .stream {
+            width: 972.8px;
         }
 
         .shop {
