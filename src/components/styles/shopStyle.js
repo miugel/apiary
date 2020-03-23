@@ -69,9 +69,10 @@ const ShopContainer = styled.div`
     }
 
     @media (min-width: 1024px) {
-        height: calc(100vh - 144px);
+        height: calc(100vh - 272px);
 
         .products {
+            width: 972.8px;
             display: flex;
             justify-content: space-between;
 
