@@ -1,15 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { addToCart } from '../actions';
 import Header from './Header';
 import Footer from './Footer';
 import styled from 'styled-components';
-import product1 from '../img/product1.jpg';
-import product2 from '../img/product2.jpg';
+import { inventory } from './Inventory';
+import { NotificationManager } from 'react-notifications';
 
 const  ShopContainer = styled.div`
-    padding: 64px 0;
+    margin: 64px 0;
 
     h2 {
-        margin-top: 32px;
         margin-bottom: 32px;
         font-size: 2rem;
         font-weight: 700;
@@ -23,7 +24,7 @@ const  ShopContainer = styled.div`
         margin: 0 auto;
 
         .product {
-            margin-bottom: 32px;
+            // margin-bottom: 32px;
 
             img {
                 width: 100%;
@@ -58,19 +59,18 @@ const  ShopContainer = styled.div`
             button {
                 width: 100%;
                 padding: 12px 0;
-                border: 1px solid #ffb347;
                 border-radius: 3px;
-                background-color: #ffb347;
+                background: linear-gradient(to right, #ffb347, #ffcc33);
+                border: none;
                 font-family: 'Quicksand', sans-serif;
                 font-size: 1rem;
                 font-weight: 600;
-                color: whitesmoke;
+                color: #333;
                 cursor: pointer;
                 transition: 0.25s;
 
                 :hover {
-                    background-color: whitesmoke;
-                    color: #ffb347;
+                    opacity: 0.5;
                 }
             }
         }
@@ -93,14 +93,12 @@ const  ShopContainer = styled.div`
 /* global Stripe */
 const stripe = Stripe('pk_test_jlwufytqI1hnlgTUDi3DD7qh00P74sLvEM');
 
-const Shop = () => {
+const Shop = props => {
     const onClick = () => {
         stripe.redirectToCheckout({
-            items: [
-              {sku: 'sku_GhmqRa7zJiHUB2', quantity: 2}
-            ],
-            successUrl: 'https://localhost:3000/success',
-            cancelUrl: 'https://localhost:3000/cancel',
+            items: props.cart,
+            successUrl: 'https://localhost:3000',
+            cancelUrl: 'https://localhost:3000',
         }).then(result => {
             console.log(result.error.message);
         });
@@ -110,24 +108,22 @@ const Shop = () => {
         <>
             <Header/>
             <ShopContainer>
-                <h2>Shop</h2>
+                <h2 onClick={onClick}>Shop</h2>
 
                 <div className='products'>
-                    <div className='product'>
-                        <img src={product1} alt='apiary keyboards sticker'/>
-                        <p className='company'>Apiary Keyboards</p>
-                        <p className='name'>Apiary Sticker</p>
-                        <p className='price'>$3 USD</p>
-                        <button onClick={onClick}>Add to cart</button>
-                    </div>
-
-                    <div className='product'>
-                        <img src={product2} alt='apiary keyboards sticker with handwritten thank you note'/>
-                        <p className='company'>Apiary Keyboards</p>
-                        <p className='name'>Apiary Sticker + Handwritten Thank You</p>
-                        <p className='price'>$5 USD</p>
-                        <button onClick={onClick}>Add to cart</button>
-                    </div>
+                    {inventory.map((item, index) => (
+                        <div key={index} className='product'>
+                            <img src={item.image} alt={`${item.name}`}/>
+                            <p className='company'>Apiary Keyboards</p>
+                            <p className='name'>{item.name}</p>
+                            <p className='price'>${item.price} USD</p>
+                            <button onClick={() => {
+                                props.addToCart(item.sku);
+                                NotificationManager.success(`Successfully added an item to your cart`, null, 3000);
+                                props.history.push('/cart');
+                            }}>Add to cart</button>
+                        </div>
+                    ))}
                 </div>
             </ShopContainer>
             <Footer/>
@@ -135,4 +131,10 @@ const Shop = () => {
     );
 };
 
-export default Shop;
+const mapStateToProps = state => {
+    return {
+        cart: state.cart
+    };
+};
+
+export default connect(mapStateToProps, { addToCart })(Shop);

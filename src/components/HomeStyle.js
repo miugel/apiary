@@ -189,7 +189,7 @@ const HomeContainer = styled.div`
                 font-family: 'Quicksand', sans-serif;
                 font-size: 1rem;
                 font-weight: 600;
-                color: whitesmoke;
+                color: #333;
                 cursor: pointer;
                 transition: 0.25s;
 

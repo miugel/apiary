@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import logo from '../img/logo.png';
@@ -71,7 +72,7 @@ const HeaderContainer = styled.div`
     }
 `;
 
-const Header = () => {
+const Header = props => {
     return (
         <HeaderContainer>
             <div className='header'>
@@ -81,7 +82,7 @@ const Header = () => {
                         <li><a href='https://www.reddit.com/r/mechmarket/comments/e9rbg9/service_apiary_keyboards_building_soldering/' target='_blank' rel='noopener noreferrer'>FAQ</a></li>
                         {/* <li><Link to='/gallery'>Gallery</Link></li> */}
                         <li><Link to='/shop'>Shop</Link></li>
-                        <li className='cart'><Link to='/cart'>Cart<p>99</p></Link></li>
+                        <li className='cart'><Link to='/cart'>Cart<p>{props.cart[0].quantity + props.cart[1].quantity}</p></Link></li>
                     </ul>
                 </nav>
             </div>
@@ -89,4 +90,10 @@ const Header = () => {
     );
 };
 
-export default Header;
+const mapStateToProps = state => {
+    return {
+        cart: state.cart
+    };
+};
+
+export default connect(mapStateToProps)(Header);
