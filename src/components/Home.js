@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Header from './Header';
-import Footer from './Footer';
-import HomeContainer from './styles/HomeStyle';
+import Header from './header';
+import Footer from './footer';
+import HomeContainer from './styles/homeStyle';
 import feature1 from '../img/feature1.jpeg';
 import feature2 from '../img/feature2.jpeg';
 import feature3 from '../img/feature3.jpeg';
@@ -23,7 +23,7 @@ const Home = () => {
 
                 <div className='features'>
                     <div className='feature'>
-                        <img src={feature1} alt='keyboard image'/>
+                        <img src={feature1} alt='first keyboard'/>
                         <div className='information'>
                             <i className="far fa-check-circle"></i>
                             <p>Serviced hundreds of community members and counting</p>
@@ -31,7 +31,7 @@ const Home = () => {
                     </div>
 
                     <div className='feature'>
-                        <img src={feature2} alt='keyboard image'/>
+                        <img src={feature2} alt='second keyboard'/>
                         <div className='information'>
                             <i className="far fa-check-circle"></i>
                             <p>Knowledgeable and experienced</p>
@@ -39,7 +39,7 @@ const Home = () => {
                     </div>
 
                     <div className='feature'>
-                        <img src={feature3} alt='keyboard image'/>
+                        <img src={feature3} alt='third keyboard'/>
                         <div className='information'>
                             <i className="far fa-check-circle"></i>
                             <p>Quick turnaround times</p>
@@ -47,7 +47,7 @@ const Home = () => {
                     </div>
 
                     <div className='feature'>
-                        <img src={feature4} alt='keyboard image'/>
+                        <img src={feature4} alt='fourth keyboard'/>
                         <div className='information'>
                             <i className="far fa-check-circle"></i>
                             <p>Each board is handled with the utmost attention and care</p>

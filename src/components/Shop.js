@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addToCart } from '../actions';
-import Header from './Header';
-import Footer from './Footer';
+import Header from './header';
+import Footer from './footer';
+import { inventory } from '../data/inventory';
 import ShopContainer from './styles/shopStyle';
-import { inventory } from './Inventory';
 import { NotificationManager } from 'react-notifications';
 
 /* global Stripe */
