@@ -22,6 +22,7 @@ const ShopContainer = styled.div`
                 width: 100%;
                 margin-bottom: 16px;
                 border-radius: 3px;
+                cursor: pointer;
             }
 
             .company {
@@ -30,6 +31,7 @@ const ShopContainer = styled.div`
                 font-weight: 500;
                 color: #333;
                 text-align: center;
+                cursor: pointer;
             }
 
             .name {
@@ -38,6 +40,7 @@ const ShopContainer = styled.div`
                 font-weight: 600;
                 color: #333;
                 text-align: center;
+                cursor: pointer;
             }
 
             .price {
@@ -46,6 +49,7 @@ const ShopContainer = styled.div`
                 font-weight: 500;
                 color: #333;
                 text-align: center;
+                cursor: pointer;
             }
 
             button {

@@ -1,6 +1,6 @@
 export const ADD_TO_CART = 'ADD_TO_CART';
 
-export const addToCart = sku => ({
+export const addToCart = (sku, quantity) => ({
     type: ADD_TO_CART,
-    payload: sku
+    payload: {sku: sku, quantity: quantity}
 });

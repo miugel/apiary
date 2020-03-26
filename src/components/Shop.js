@@ -30,13 +30,13 @@ const Shop = props => {
                 <div className='products'>
                     {inventory.map((item, index) => (
                         <div key={index} className='product'>
-                            <img src={item.image} alt={`${item.name}`}/>
-                            <p className='company'>Apiary Keyboards</p>
-                            <p className='name'>{item.name}</p>
-                            <p className='price'>${item.price} USD</p>
+                            <img src={item.image} alt={`${item.name}`} onClick={() => props.history.push(`/product/${item.id}`)}/>
+                            <p className='company' onClick={() => props.history.push(`/product/${item.id}`)}>Apiary Keyboards</p>
+                            <p className='name' onClick={() => props.history.push(`/product/${item.id}`)}>{item.name}</p>
+                            <p className='price' onClick={() => props.history.push(`/product/${item.id}`)}>${item.price} USD</p>
                             <button onClick={() => {
-                                props.addToCart(item.sku);
-                                NotificationManager.success(`Successfully added an item to your cart`, null, 3000);
+                                props.addToCart(item.sku, 1);
+                                NotificationManager.success('Successfully added an item to your cart', null, 3000);
                                 props.history.push('/cart');
                             }}>Add to cart</button>
                         </div>
