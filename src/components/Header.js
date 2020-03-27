@@ -9,7 +9,6 @@ const HeaderContainer = styled.div`
     position: relative;
 
     .header {
-        max-width: 921.6px;
         height: 72px;
         width: 90%;
         margin: 0 auto;
@@ -68,6 +67,12 @@ const HeaderContainer = styled.div`
                 }
                 
             }
+        }
+    }
+
+    @media(min-width: 1024px) {
+        .header {
+            width: 972.8px;
         }
     }
 `;

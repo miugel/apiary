@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.div`
-    max-width: 921.6px;
     height: 72px;
     width: 90%;
     margin: 0 auto;
@@ -37,6 +36,10 @@ const FooterContainer = styled.div`
             font-weight: 500;
             color: #333;
         } 
+    }
+
+    @media(min-width: 1024px) {
+        width: 972.8px;
     }
 `;
 
