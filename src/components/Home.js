@@ -74,7 +74,7 @@ const Home = () => {
 
                 <div className='shop'>
                     <h2>Don't need a build, but still want to show your support?</h2>
-                    <h3>Check out our shop and see if anything tickles your fancy!</h3>
+                    <p>Check out our shop and see if anything tickles your fancy!</p>
                     <Link to='/shop'><button>Shop</button></Link>
                 </div>
             </HomeContainer>
