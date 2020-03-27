@@ -5,7 +5,7 @@ import Header from './header';
 import Footer from './footer';
 import {inventory} from '../data/inventory';
 import styled from 'styled-components';
-import { NotificationManager } from 'react-notifications';
+import {NotificationManager} from 'react-notifications';
 
 const ProductContainer = styled.div`
     width: 90%;
@@ -109,14 +109,14 @@ const Product = props => {
     
     const [quantity, setQuantity] = useState(0);
 
-    const increase = () => {
-        setQuantity(quantity + 1);
-    };
-
     const decrease = () => {
         if (quantity > 0) {
             setQuantity(quantity - 1);
         };
+    };
+
+    const increase = () => {
+        setQuantity(quantity + 1);
     };
 
     const onClick = event => {

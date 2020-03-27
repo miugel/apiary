@@ -7,25 +7,12 @@ import { inventory } from '../data/inventory';
 import ShopContainer from './styles/shopStyle';
 import { NotificationManager } from 'react-notifications';
 
-/* global Stripe */
-const stripe = Stripe('pk_test_jlwufytqI1hnlgTUDi3DD7qh00P74sLvEM');
-
 const Shop = props => {
-    const onClick = () => {
-        stripe.redirectToCheckout({
-            items: props.cart,
-            successUrl: 'https://localhost:3000',
-            cancelUrl: 'https://localhost:3000',
-        }).then(result => {
-            console.log(result.error.message);
-        });
-    };
-
     return (
         <>
             <Header/>
             <ShopContainer>
-                <h2 onClick={onClick}>Shop</h2>
+                <h2>Shop</h2>
 
                 <div className='products'>
                     {inventory.map((item, index) => (
