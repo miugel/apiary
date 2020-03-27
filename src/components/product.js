@@ -93,13 +93,13 @@ const ProductContainer = styled.div`
         justify-content: space-between;
         
         img {
-            height: 317.92px;
-            width: 49%;
+            height: 308.19px;
+            width: 47.5%;
             margin-bottom: 0;
         }
 
         .information {
-            width: 49%;
+            width: 47.5%;
         }
     }
 `;
