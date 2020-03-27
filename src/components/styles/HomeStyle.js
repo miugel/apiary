@@ -166,7 +166,7 @@ const HomeContainer = styled.div`
             text-align: center;
         }
 
-        h3 {
+        p {
             margin-bottom: 16px;
             font-size: 1rem;
             font-weight: 500;
@@ -229,7 +229,7 @@ const HomeContainer = styled.div`
         }
 
         .shop {
-            h3 {
+            p {
                 font-size: 1.125rem;
             }
         }
