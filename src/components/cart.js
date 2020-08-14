@@ -143,8 +143,8 @@ const Cart = props => {
     const onSubmit = () => {
         stripe.redirectToCheckout({
             items: props.cart.filter(item => item.quantity > 0),
-            successUrl: 'https://apiarykeyboards.netlify.com',
-            cancelUrl: 'https://apiarykeyboards.netlify.com',
+            successUrl: 'https://apiarykeyboards.now.sh',
+            cancelUrl: 'https://apiarykeyboards.now.sh',
         }).then(result => {
             console.log(result.error.message);
         });
