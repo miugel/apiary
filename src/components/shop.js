@@ -8,6 +8,12 @@ import ShopContainer from './styles/shopStyle';
 import { NotificationManager } from 'react-notifications';
 
 const Shop = props => {
+    const addItemToCart = sku => {
+        props.addToCart(sku, 1);
+        NotificationManager.success('Successfully added an item to your cart', null, 3000);
+        props.history.push('/cart');
+    };
+
     return (
         <>
             <Header/>
@@ -21,11 +27,7 @@ const Shop = props => {
                             <p className='company' onClick={() => props.history.push(`/shop/${item.id}`)}>Apiary Keyboards</p>
                             <p className='name' onClick={() => props.history.push(`/shop/${item.id}`)}>{item.name}</p>
                             <p className='price' onClick={() => props.history.push(`/shop/${item.id}`)}>${item.price} USD</p>
-                            <button onClick={() => {
-                                props.addToCart(item.sku, 1);
-                                NotificationManager.success('Successfully added an item to your cart', null, 3000);
-                                props.history.push('/cart');
-                            }}>Add to cart</button>
+                            <button onClick={() => addItemToCart(item.sku)}>Add to cart</button>
                         </div>
                     ))}
                 </div>

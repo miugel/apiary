@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
-import {connect} from 'react-redux';
-import {addToCart} from '../actions';
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { addToCart } from '../actions';
 import Header from './header';
 import Footer from './footer';
-import {inventory} from '../data/inventory';
+import { inventory } from '../data/inventory';
 import styled from 'styled-components';
-import {NotificationManager} from 'react-notifications';
+import { NotificationManager } from 'react-notifications';
 
 const ProductContainer = styled.div`
     width: 90%;
@@ -115,9 +115,7 @@ const Product = props => {
         };
     };
 
-    const increase = () => {
-        setQuantity(quantity + 1);
-    };
+    const increase = () => setQuantity(quantity + 1);
 
     const onClick = event => {
         if (quantity > 0) {
@@ -150,4 +148,4 @@ const Product = props => {
     );
 };
 
-export default connect(null, {addToCart})(Product);
+export default connect(null, { addToCart })(Product);

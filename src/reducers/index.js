@@ -1,4 +1,4 @@
-import {ADD_TO_CART, DECREASE, INCREASE, REMOVE} from '../actions';
+import { ADD_TO_CART, DECREASE, INCREASE, REMOVE } from '../actions';
 
 const initialState = {
     cart: [

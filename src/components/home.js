@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Header from './header';
 import Footer from './footer';
 import HomeContainer from './styles/homeStyle';
@@ -17,7 +17,9 @@ const Home = () => {
                     <div className='landing'>
                         <h1>Custom mechanical keyboards</h1>
                         <h2>built to your taste, repaired, or modified</h2>
-                        <a href='https://www.reddit.com/r/mechmarket/comments/e9rbg9/service_apiary_keyboards_building_soldering/' target='_blank' rel='noopener noreferrer'><button>Our Services</button></a>
+                        <a href='https://www.reddit.com/r/mechmarket/comments/e9rbg9/service_apiary_keyboards_building_soldering/' target='_blank' rel='noopener noreferrer'>
+                            <button>Our Services</button>
+                        </a>
                     </div>
                 </div>
 

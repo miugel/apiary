@@ -1,11 +1,11 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {decrease, increase, remove} from '../actions';
+import { connect } from 'react-redux';
+import { decrease, increase, remove } from '../actions';
 import Header from './header';
 import Footer from './footer';
-import {inventory} from '../data/inventory';
+import { inventory } from '../data/inventory';
 import styled from 'styled-components';
-import {NotificationManager} from 'react-notifications';
+import { NotificationManager } from 'react-notifications';
 
 const CartContainer = styled.div`
     height: calc(100vh - 272px);
@@ -150,6 +150,15 @@ const Cart = props => {
         });
     };
 
+    const increaseQuantity = sku => props.increase(sku);
+
+    const decreaseQuantity = sku => props.decrease(sku);
+
+    const removeItem = (quantity, sku) => {
+        NotificationManager.error(quantity > 1 ? 'Deleted items from your cart' : 'Deleted an item from your cart', null, 3000);
+        props.remove(sku);
+    };
+
     return (
         <>
             <Header/>
@@ -164,16 +173,13 @@ const Cart = props => {
                                     <p className='name'>{inventory[0].name}</p>
                                     <p className='price'>${inventory[0].price} USD</p>
                                     <div className='counter'>
-                                        <i className='fas fa-minus-square' onClick={() => props.decrease(inventory[0].sku)}></i>
+                                        <i className='fas fa-minus-square' onClick={() => decreaseQuantity(inventory[0].sku)}></i>
                                         <p className='number'>{props.cart[0].quantity}</p>
-                                        <i className='fas fa-plus-square' onClick={() => props.increase(inventory[0].sku)}></i>
+                                        <i className='fas fa-plus-square' onClick={() => increaseQuantity(inventory[0].sku)}></i>
                                     </div>
                                 </div>
                                 
-                                <p className='remove' onClick={() => {
-                                    NotificationManager.error(props.cart[0].quantity > 1 ? 'Deleted items from your cart' : 'Deleted an item from your cart', null, 3000);
-                                    props.remove(inventory[0].sku);
-                                }}><i className='fas fa-times-circle'></i>Remove</p>
+                                <p className='remove' onClick={() => removeItem(props.cart[0].quantity, inventory[0].sku)}><i className='fas fa-times-circle'></i>Remove</p>
                             </div>
                         </div>}
 
@@ -184,16 +190,13 @@ const Cart = props => {
                                     <p className='name'>{inventory[1].name}</p>
                                     <p className='price'>${inventory[1].price} USD</p>
                                     <div className='counter'>
-                                        <i className='fas fa-minus-square' onClick={() => props.decrease(inventory[1].sku)}></i>
+                                        <i className='fas fa-minus-square' onClick={() => decreaseQuantity(inventory[1].sku)}></i>
                                         <p className='number'>{props.cart[1].quantity}</p>
-                                        <i className='fas fa-plus-square' onClick={() => props.increase(inventory[1].sku)}></i>
+                                        <i className='fas fa-plus-square' onClick={() => increaseQuantity(inventory[1].sku)}></i>
                                     </div>
                                 </div>
                                 
-                                <p className='remove' onClick={() => {
-                                    NotificationManager.error(props.cart[1].quantity > 1 ? 'Deleted items from your cart' : 'Deleted an item from your cart', null, 3000);
-                                    props.remove(inventory[1].sku);
-                                }}><i className='fas fa-times-circle'></i>Remove</p>
+                                <p className='remove' onClick={() => removeItem(props.cart[1].quantity, inventory[1].sku)}><i className='fas fa-times-circle'></i>Remove</p>
                             </div>
                         </div>}
 
@@ -215,4 +218,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(mapStateToProps, {decrease, increase, remove})(Cart);
+export default connect(mapStateToProps, { decrease, increase, remove })(Cart);
