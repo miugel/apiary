@@ -118,7 +118,7 @@ const Product = props => {
     const increase = () => setQuantity(quantity + 1);
 
     const onClick = event => {
-        if (quantity == 0) {
+        if (quantity === 0) {
             NotificationManager.warning('Please select a quantity', null, 3000);
         } else {
             props.addToCart(inventory[id - 1].sku, quantity);
