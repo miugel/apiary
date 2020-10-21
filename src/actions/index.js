@@ -5,7 +5,7 @@ export const REMOVE = 'REMOVE';
 
 export const addToCart = (sku, quantity) => ({
     type: ADD_TO_CART,
-    payload: {sku: sku, quantity: quantity}
+    payload: { sku: sku, quantity: quantity }
 });
 
 export const decrease = sku => ({
