@@ -1,11 +1,11 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {decrease, increase, remove} from '../actions';
+import { connect } from 'react-redux';
+import { decrease, increase, remove } from '../actions';
 import Header from './header';
 import Footer from './footer';
-import {inventory} from '../data/inventory';
+import { inventory } from '../data/inventory';
 import styled from 'styled-components';
-import {NotificationManager} from 'react-notifications';
+import { NotificationManager } from 'react-notifications';
 
 const CartContainer = styled.div`
     height: calc(100vh - 272px);
