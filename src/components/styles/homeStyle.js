@@ -54,8 +54,7 @@ const HomeContainer = styled.div`
     .features {
         width: 90%;
         margin: 0 auto;
-        margin-top: 128px;
-        margin-bottom: 128px;
+        padding: 128px 0;
 
         .feature {
             display: flex;
@@ -130,7 +129,7 @@ const HomeContainer = styled.div`
     .stream {
         width: 90%;
         margin: 0 auto;
-        margin-bottom: 128px;
+        padding: 128px 0;
 
         h2 {
             margin-bottom: 32px;
@@ -152,7 +151,7 @@ const HomeContainer = styled.div`
     .shop {
         width: 90%;
         margin: 0 auto;
-        margin-bottom: 128px;
+        padding: 128px 0 256px;
         display: flex;
         flex-direction: column;
         justify-content: center;
