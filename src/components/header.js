@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { persistCart } from '../actions';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from '../img/logo.png';
@@ -78,6 +79,12 @@ const HeaderContainer = styled.div`
 `;
 
 const Header = props => {
+    useEffect(() => {
+        if (localStorage.getItem('cart')) {
+            props.persistCart(JSON.parse(localStorage.getItem('cart')));
+        };
+    }, []);
+
     return (
         <HeaderContainer>
             <div className='header'>
@@ -101,4 +108,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps, { persistCart })(Header);

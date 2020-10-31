@@ -1,4 +1,4 @@
-import { ADD_TO_CART, DECREASE, INCREASE, REMOVE } from '../actions';
+import { ADD_TO_CART, DECREASE, INCREASE, REMOVE, PERSIST_CART } from '../actions';
 
 const initialState = {
     cart: [
@@ -16,23 +16,40 @@ const initialState = {
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_TO_CART:
+            let addToCartNewCart = state.cart.map(item => item.sku === action.payload.sku ? {...item, quantity: item.quantity + action.payload.quantity} : item)
+            localStorage.setItem('cart', JSON.stringify(addToCartNewCart));
+
             return {
-                cart: state.cart.map(item => item.sku === action.payload.sku ? {...item, quantity: item.quantity + action.payload.quantity} : item)
+                cart: addToCartNewCart
             };
 
         case DECREASE:
+            let decreaseNewCart = state.cart.map(item => item.sku === action.payload ? {...item, quantity: item.quantity - 1} : item)
+            localStorage.setItem('cart', JSON.stringify(decreaseNewCart));
+
             return {
-                cart: state.cart.map(item => item.sku === action.payload ? {...item, quantity: item.quantity - 1} : item)
+                cart: decreaseNewCart
             };
 
         case INCREASE:
+            let increaseNewCart = state.cart.map(item => item.sku === action.payload ? {...item, quantity: item.quantity + 1} : item)
+            localStorage.setItem('cart', JSON.stringify(increaseNewCart));
+
             return {
-                cart: state.cart.map(item => item.sku === action.payload ? {...item, quantity: item.quantity + 1} : item)
+                cart: increaseNewCart
             };
 
         case REMOVE:
+            let removeNewCart = state.cart.map(item => item.sku === action.payload ? {...item, quantity: 0} : item)
+            localStorage.setItem('cart', JSON.stringify(removeNewCart));
+
             return {
-                cart: state.cart.map(item => item.sku === action.payload ? {...item, quantity: 0} : item)
+                cart: removeNewCart
+            };
+
+        case PERSIST_CART:
+            return {
+                cart: action.payload
             };
 
         default:
